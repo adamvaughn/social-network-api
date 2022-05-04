@@ -5,7 +5,6 @@ const {
 const moment = require('moment');
 
 const reactionSchema = new Schema({
-    //set id to avoid mix up with parent thought id
     reactionId: {
         type: Schema.Types.ObjectId, 
         default: () => new Types.ObjectId()
