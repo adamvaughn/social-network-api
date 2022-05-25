@@ -1,9 +1,6 @@
-const {
-    User
-} = require('../models');
+const {User} = require('../models');
 
 const userController = {
-
     // Get all users
     getAllUsers(req, res) {
         User.find({})
@@ -144,7 +141,7 @@ const userController = {
             .then(dbUserData => {
                 if (!dbUserData) {
                     res.status(404).json({
-                        message: 'No user found with this id!'
+                        message: 'ID does not return a user.'
                     });
                     return;
                 }
